@@ -1,3 +1,4 @@
+"use client"
 import { motion } from "framer-motion";
 
 const HeroSubtitle: React.FC<{ subtitle: string }> = ({ subtitle }) => {

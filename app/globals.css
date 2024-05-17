@@ -1,6 +1,39 @@
+/* Tailwind CSS file */
+
 @tailwind base;
+
 @tailwind components;
+
 @tailwind utilities;
+
+/* Custom scroll bar styles */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+  visibility: hidden; /* Hide the scrollbar by default */
+}
+
+/* Show the scrollbar when the class is added */
+.scrollbar-visible ::-webkit-scrollbar {
+  visibility: visible;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Define your custom classes */
 
 .light {
   @apply bg-white text-black;
