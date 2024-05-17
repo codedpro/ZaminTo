@@ -1,4 +1,3 @@
-"use client"
 import React, { useState, useEffect, useRef } from "react";
 import { MdMenu, MdClose } from "react-icons/md";
 
@@ -9,8 +8,10 @@ interface HeaderItem {
 
 export default function MenuIcon({
   headerItems,
+  isScrolled,
 }: {
   headerItems: HeaderItem[];
+  isScrolled: boolean;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
@@ -47,10 +48,14 @@ export default function MenuIcon({
   return (
     <>
       <div
-        className="lg:hidden transition duration-300 hover:text-orange-500 cursor-pointer"
+        className={`lg:hidden transition duration-300 hover:text-orange-500 cursor-pointer ${isScrolled ? 'text-black' : 'text-white'}`}
         onClick={toggleSidebar}
       >
-        <MdMenu className="w-8 h-8" />
+        {sidebarOpen ? (
+          <MdClose className="w-8 h-8" />
+        ) : (
+          <MdMenu className="w-8 h-8" />
+        )}
       </div>
       {sidebarOpen && (
         <div className="fixed inset-0 bg-gray-800 bg-opacity-50 z-50">
