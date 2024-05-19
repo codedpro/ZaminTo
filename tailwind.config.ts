@@ -9,6 +9,9 @@ const config: Config = {
   theme: {
     extend: {},
   },
+  backgroundImage: {
+    banner: "url('/houses/searchBG.jpg')",
+  },
   plugins: [],
   darkMode: 'class',
 

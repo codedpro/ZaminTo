@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import MenuIcon from "./MenuIcon";
 import { headerItems } from "@/constants/headerItems";
 import Image from "next/image";
@@ -8,19 +8,17 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 100);
-    };
+    const timer = setTimeout(() => {
+      setIsScrolled(true);
+    }, 10);
 
-    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timer);
     };
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-20 ${isScrolled ? 'bg-white text-black' : 'bg-transparent text-white'}`} >
+    <header className={`fixed top-0 left-0 right-0 z-50 ${isScrolled ? 'bg-white text-black' : 'bg-transparent text-white'}`} >
       <nav className="flex items-center justify-between px-5 py-3 text-black uppercase">
         <MenuIcon headerItems={headerItems} isScrolled={isScrolled} />
 
