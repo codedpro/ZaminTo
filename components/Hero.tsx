@@ -27,7 +27,6 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, buttonText, buttonLink }) 
         style={{ transform: `translateY(${scrollY * 0.5}px)` }}
       />
 
-      {/* Content on top of the GIF */}
       <div className="relative z-20 flex flex-col items-center justify-center h-screen">
         <div className="bg-gradient-to-t from-transparent to-black opacity-75 absolute inset-0" />
         <HeroTitle title={title} />

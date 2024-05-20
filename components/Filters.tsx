@@ -1,9 +1,10 @@
+// components/Filters.tsx
 "use client";
 
 import { useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 
-const links = ["Luxury", "Big", "Small", "Apartment", "Pool"];
+const links = ["Luxury", "Big", "Beachfront", "Modern", "Pool"];
 
 const Filters = () => {
   const [active, setActive] = useState("");
@@ -11,32 +12,37 @@ const Filters = () => {
   const router = useRouter();
 
   const handleFilter = (link: string) => {
+    const params = new URLSearchParams(searchParams);
+    
     if (active === link) {
       setActive("");
+      params.delete('filter');
     } else {
       setActive(link);
+      params.set('filter', link);
     }
-
-    const newUrl = active === link ? "/" : `/?filter=${link}`;
+    
+    const newUrl = `/?${params.toString()}`;
     router.push(newUrl, { scroll: false });
   };
 
   return (
-    <div className="flex justify-center py-12">
-      <ul className="no-scrollbar flex w-full max-w-full gap-2 overflow-auto sm:max-w-2xl">
-        {links.map((link) => (
-          <button
-            key={link}
-            onClick={() => handleFilter(link)}
-            className={`${
-              active === link ? "bg-orange-500 text-white" : "bg-white text-orange-500"
-            } whitespace-nowrap rounded-lg border border-orange-500 px-8 py-2.5 capitalize transition-colors duration-200`}
-          >
-            {link}
-          </button>
-        ))}
-      </ul>
-    </div>
+    <div className="flex justify-center py-6">
+    <ul className="flex flex-wrap sm:flex-nowrap gap-2 overflow-auto max-w-full">
+      {links.map((link) => (
+        <button
+          key={link}
+          onClick={() => handleFilter(link)}
+          className={`${
+            active === link ? "bg-orange-500 text-white" : "bg-white text-orange-500"
+          } whitespace-nowrap rounded-lg border border-orange-500 px-8 py-2.5 capitalize transition-colors duration-200`}
+        >
+          {link}
+        </button>
+      ))}
+    </ul>
+  </div>
+  
   );
 };
 
