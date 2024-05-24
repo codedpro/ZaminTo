@@ -1,14 +1,23 @@
+import Image from "next/image";
+import { FiPieChart } from "react-icons/fi";
 
-interface House {
-  imageURL: string;
-  price: number;
-  discount?: number;
-  name: string;
-  capacity: number;
-  sold: number;
-  tagNames: { [key: string]: string };
-  tags: { [key: string]: boolean } | undefined;
-}
+const toPersianNumber = (number: number) => {
+  const persianDigits = "۰۱۲۳۴۵۶۷۸۹";
+  const numberString = String(number);
+  let result = "";
+
+  for (let i = 0; i < numberString.length; i++) {
+    if (i > 0 && i % 3 === 0) {
+      result = "،" + result;
+    }
+    result =
+      persianDigits[
+        parseInt(numberString.charAt(numberString.length - 1 - i))
+      ] + result;
+  }
+
+  return result;
+};
 
 interface House {
   imageURL: string;
@@ -31,15 +40,28 @@ const HouseCard: React.FC<House> = ({
   tagNames,
   tags,
 }) => {
+  const formattedPrice = toPersianNumber(price);
+  const formattedSold = toPersianNumber(sold);
+  const formattedCapacity = toPersianNumber(capacity);
+
   return (
-    <div className="bg-white text-gray-800 rounded-lg shadow-md p-4 mb-4 relative">
+    <div
+      className="bg-white text-gray-800 rounded-lg shadow-md p-4 mb-4 relative"
+      dir="rtl"
+    >
       <div className="w-full h-auto md:h-56 relative">
-        <img src={imageURL} alt={name} className="w-full h-full object-cover rounded-lg" />
+        <Image
+          src={imageURL}
+          alt={name}
+          width={500}
+          height={500}
+          className="w-full h-full object-cover rounded-lg"
+        />
         <div className="absolute top-1 right-1 flex flex-col gap-1">
           {discount && (
             <div
               dir="rtl"
-              className="bg-yellow-500 text-center text-sm text-white rounded-full px-3 py-1"
+              className="bg-orange-500 text-center text-sm text-white rounded-full px-3 py-1"
             >
               {discount}% تخفیف
             </div>
@@ -61,14 +83,18 @@ const HouseCard: React.FC<House> = ({
       <div className="mt-4">
         <h3 className="text-lg font-semibold">{name}</h3>
         <div className="flex justify-between items-center mt-2">
-          <span className="text-lg">{`$${price}`}</span>
-          <span>{`${sold}/${capacity}`}</span>
+          <span className="text-lg flex items-center">
+            {formattedPrice}{" "}
+            <Image src="/icons/Toman.svg" alt="تومان" width={16} height={16} />
+          </span>
+          <span className="flex items-center">
+            {`${formattedSold}/${formattedCapacity}`}{" "}
+            <FiPieChart className="mr-1" />
+          </span>
         </div>
       </div>
     </div>
   );
 };
-
-
 
 export default HouseCard;

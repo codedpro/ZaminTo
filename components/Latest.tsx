@@ -4,7 +4,7 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import HouseCard from "./Cards/HouseCard";
 import { houses } from "@/constants/hot";
 
-const Hot: React.FC = () => {
+const Latest: React.FC = () => {
   const [scrollPosition, setScrollPosition] = React.useState<number>(0);
   const [isScrollable, setIsScrollable] = React.useState<boolean>(false);
 
@@ -40,7 +40,7 @@ const Hot: React.FC = () => {
         `}
       </style>
       <div dir="rtl" className="flex items-center justify-between mb-4">
-        <h2 className="text-lg font-semibold">داغ ترین ها</h2>
+        <h2 className="text-lg font-semibold">جدید ترین ها</h2>
         <div className="flex items-center">
           <button
             className={`p-2 rounded-full bg-gray-200 hover:bg-gray-300 ${
@@ -84,4 +84,4 @@ const Hot: React.FC = () => {
   );
 };
 
-export default Hot;
+export default Latest;

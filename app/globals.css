@@ -23,15 +23,21 @@
   font-weight: 400;
   font-style: italic;
 }
+@font-face {
+  font-family: 'Iran Sans';
+  src: url('/fonts/FontsFree-Net-ir_sans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+.body {
+  font-family: 'Iran Sans', sans-serif;
+}
 .amiri-bold-italic {
   font-family: "Amiri", serif;
   font-weight: 700;
   font-style: italic;
 }
-
-
-
 
 /* Custom scroll bar styles */
 ::-webkit-scrollbar {

@@ -6,7 +6,7 @@ const HeroSubtitle: React.FC<{ subtitle: string }> = ({ subtitle }) => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.6, duration: 0.5 } }}
-      className="text-2xl font-medium text-gray-200 mb-12"
+      className="text-2xl font-medium text-gray-100 mb-12"
     >
       <motion.span
         key={subtitle} 

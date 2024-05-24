@@ -43,7 +43,7 @@ const LoadMore: React.FC<LoadMoreProps> = ({ limit }) => {
           onClick={handleLoadMore}
           className="bg-orange-500 text-white rounded-lg px-8 py-2.5 capitalize transition-colors duration-200 hover:bg-orange-600"
         >
-          Load More
+          نمایش بیشتر
         </button>
       )}
       {currentShows > 8 && (
@@ -51,7 +51,7 @@ const LoadMore: React.FC<LoadMoreProps> = ({ limit }) => {
           onClick={handleShowLess}
           className="bg-orange-500 text-white rounded-lg px-8 py-2.5 capitalize transition-colors duration-200 hover:bg-orange-600"
         >
-          Show Less
+          نمایش کمتر
         </button>
       )}
     </div>

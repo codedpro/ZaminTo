@@ -75,7 +75,7 @@ export default function MenuIcon({
                 href="/login"
                 className="text-lg transition duration-300 hover:text-orange-500"
               >
-                Login
+                ورود
               </a>
               {Array.isArray(headerItems) &&
                 headerItems.map((item, index) => (

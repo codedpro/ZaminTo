@@ -4,8 +4,8 @@ export interface HeaderItem {
   }
   
   export const headerItems: HeaderItem[] = [
-    { label: "Home", link: "/" },
-    { label: "About", link: "/about" },
-    { label: "Services", link: "/services" },
+    { label: "خانه", link: "/" },
+    { label: "درباره ما", link: "/about" },
+    { label: "سرویس ها", link: "/services" },
   ];
   

@@ -22,8 +22,8 @@ const HousesList: NextPage<{ houses: House[] }> = async (context: any) => {
 
   return (
     <div className="p-4">
-      <div className="flex items-center justify-between mb-4">
-        <h2 className="text-lg font-semibold">Houses</h2>
+      <div className="flex items-center justify-center mb-4">
+        <h2 className="text-lg font-semibold text-center">زمین ها</h2>
       </div>
       {houses2?.length > 0 && (
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

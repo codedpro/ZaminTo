@@ -8,11 +8,11 @@ import { useSearchParams } from "next/navigation";
 import Filters from "./Filters";
 
 const predefinedSuggestions = [
-  "React",
-  "TypeScript",
-  "JavaScript",
-  "CSS",
-  "HTML",
+  "مدرن",
+  "استخر دار",
+  "اپارتمان",
+  "حیاط دار",
+  "باغ",
 ];
 
 const SearchBG: React.FC = () => {
@@ -61,16 +61,16 @@ const SearchBG: React.FC = () => {
     <>
       <div className="bg-opacity-70 backdrop-blur-lg p-6 rounded-lg w-full max-w-lg mx-4">
         <h1 className="text-orange-500 text-center text-5xl py-2 rounded mb-6">
-          Search
+          زمینه تو پیدا کن
         </h1>
         <div className="flex">
-          <input
+          <input dir="rtl"
             type="text"
             value={query}
             onChange={handleInputChange}
             onKeyPress={handleKeyPress}
-            placeholder="Type to search..."
-            className="flex-1 p-3 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+            placeholder="دنبال چی میگردی؟"
+            className="flex-1 p-3 border rounded-l-lg focus:outline-none"
           />
           <button
             onClick={handleSearch}
@@ -80,7 +80,10 @@ const SearchBG: React.FC = () => {
           </button>
         </div>
         {suggestions.length > 0 && (
-          <ul className="mt-2 border border-gray-300 rounded-lg bg-white bg-opacity-70 backdrop-blur-lg">
+          <ul
+            dir="rtl"
+            className="mt-2 border border-gray-300 rounded-lg bg-white bg-opacity-70 backdrop-blur-lg"
+          >
             {suggestions.map((suggestion, index) => (
               <li
                 key={index}
