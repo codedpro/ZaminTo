@@ -1,11 +1,8 @@
 "use client";
-// components/SearchBG.tsx
-
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
-import Filters from "./Filters";
 
 const predefinedSuggestions = [
   "مدرن",

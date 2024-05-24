@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import HeroTitle from "./Hero/HeroTitle";
 import HeroSubtitle from "./Hero/HeroSubtitle";

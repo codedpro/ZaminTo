@@ -1,4 +1,4 @@
-import { NextPage, GetServerSideProps } from "next";
+import { NextPage, GetServerSideProps, GetServerSidePropsResult } from "next";
 import HouseCard from "./Cards/HouseCard Responsive";
 import { houses } from "@/constants/hot";
 import LoadMore from "./LoadMore";
@@ -15,10 +15,29 @@ interface House {
   categories: string[];
 }
 
-const HousesList: NextPage<{ houses: House[] }> = async (context: any) => {
+interface Props {
+  houses: House[];
+  limit: number;
+}
+
+const isPropsResult = (
+  result: GetServerSidePropsResult<Props>
+): result is { props: Props } => {
+  return (result as { props: Props }).props !== undefined;
+};
+
+const HousesList: NextPage<{ query: any }> = async (context: any) => {
+  const result = (await getServerSideProps(
+    context
+  )) as GetServerSidePropsResult<Props>;
+
+  if (!isPropsResult(result)) {
+    return <div>Error loading houses</div>;
+  }
+
   const {
-    props: { houses: houses2 , limit},
-  } = await getServerSideProps(context);
+    props: { houses: houses2, limit },
+  } = result;
 
   return (
     <div className="p-4">
@@ -32,43 +51,45 @@ const HousesList: NextPage<{ houses: House[] }> = async (context: any) => {
           ))}
         </div>
       )}
-      <LoadMore limit={houses.length} />
+      <LoadMore limit={limit} />
     </div>
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-    const baseHouses = [...houses];
-  
-    const search = context.searchParams?.search as string | undefined;
-    const filter = context.searchParams?.filter as string | undefined;
-    const shows = context.searchParams?.shows as string | undefined;
-  
-    const filteredByName = search
-      ? baseHouses.filter(
-          (house) =>
-            typeof house.name === "string" &&
-            house.name.toLowerCase().includes(search.toLowerCase())
-        )
-      : baseHouses;
-  
-    const categories = filter ? filter.split(",") : [];
-  
-    const finalFilteredHouses = filteredByName.filter(
-      (house) =>
-        !categories.length ||
-        categories.some((category) => house.categories.includes(category.trim()))
-    );
-  
-    const showsNumber = shows ? parseInt(shows, 10) : 8;
-    const housesToShow = finalFilteredHouses.slice(0, showsNumber);
-  
-    return {
-      props: {
-        houses: housesToShow,
-      },
-    };
+export const getServerSideProps: GetServerSideProps<Props> = async (
+  context
+) => {
+  const baseHouses = [...houses];
+
+  const search = context.query?.search as string | undefined;
+  const filter = context.query?.filter as string | undefined;
+  const shows = context.query?.shows as string | undefined;
+
+  const filteredByName = search
+    ? baseHouses.filter(
+        (house) =>
+          typeof house.name === "string" &&
+          house.name.toLowerCase().includes(search.toLowerCase())
+      )
+    : baseHouses;
+
+  const categories = filter ? filter.split(",") : [];
+
+  const finalFilteredHouses = filteredByName.filter(
+    (house) =>
+      !categories.length ||
+      categories.some((category) => house.categories.includes(category.trim()))
+  );
+  const limited = finalFilteredHouses.length;
+  const showsNumber = shows ? parseInt(shows, 10) : 8;
+  const housesToShow = finalFilteredHouses.slice(0, showsNumber);
+
+  return {
+    props: {
+      houses: housesToShow,
+      limit: limited,
+    },
   };
-  
+};
 
 export default HousesList;

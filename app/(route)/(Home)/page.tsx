@@ -1,10 +1,11 @@
 import Filters from "@/components/Filters";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Hot from "@/components/Hot";
 import HousesList from "@/components/HousesList";
-import Latest from "@/components/Latest";
+import { houses } from "@/constants/hot";
 import SearchBG from "@/components/SearchBG";
+import ScrollableSection from "@/components/ScrollableSection";
+
 interface Props {
   searchParams: { [key: string]: string | undefined };
 }
@@ -21,8 +22,15 @@ const Home = async ({ searchParams }: Props) => {
         />
       </div>
 
-      <div className="relative bg-white z-30 p-4 rounded-lg shadow-md  border border-gray-300">
-        <Hot />
+      <div className="relative bg-white  z-30 p-4 rounded-lg shadow-md  border border-gray-300">
+        <ScrollableSection
+          title="داغ ترین ها"
+          houses={houses}
+          scrollAmount={350}
+          scrollInterval={3000}
+          showArrows={true}
+          customClass="hot-section"
+        />
         <div
           className="w-full flex flex-col items-center min-h-screen"
           style={{ backgroundImage: "url('searchbg.png')" }}
@@ -31,15 +39,16 @@ const Home = async ({ searchParams }: Props) => {
           <div className="flex justify-center">
             <Filters />
           </div>
-
-          <HousesList searchParams={searchParams} />
+          <HousesList query={searchParams} />
         </div>
-        <Latest />
-        <ul className="flex flex-col space-y-2">
-          <li className="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-md cursor-pointer">
-            Footer
-          </li>
-        </ul>
+        <ScrollableSection
+          title="تازه‌ترین‌ها"
+          houses={houses}
+          scrollAmount={300}
+          scrollInterval={4000}
+          showArrows={true}
+          customClass="latest-section"
+        />{" "}
       </div>
     </div>
   );
