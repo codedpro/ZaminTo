@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "ZamineTo",
   description: "buy houses ...",
   icons: {
-    icon: "/assets/company/logo/logo.svg",
+    icon: "/company/logo/logo.svg",
   },
 };
 

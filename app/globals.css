@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 .amiri-regular {
   font-family: "Amiri", serif;
@@ -15,55 +15,29 @@
   font-weight: 700;
   font-style: normal;
 }
-
+.text-white{
+  color: white;
+}
 .amiri-italic {
   font-family: "Amiri", serif;
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
-  font-family: 'Iran Sans';
-  src: url('/fonts/FontsFree-Net-ir_sans.ttf') format('truetype');
+  font-family: "Iran Sans";
+  src: url("/fonts/FontsFree-Net-ir_sans.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 .body {
-  font-family: 'Iran Sans', sans-serif;
+  font-family: "Iran Sans", sans-serif;
 }
 .amiri-bold-italic {
   font-family: "Amiri", serif;
   font-weight: 700;
   font-style: italic;
 }
-
-::-webkit-scrollbar {
-  width: 10px;
-  background-color: white;
-  z-index: 40;
-}
-
-.scrollbar-hidden ::-webkit-scrollbar {
-  visibility: hidden;
-}
-
-.scrollbar-visible ::-webkit-scrollbar {
-  visibility: visible;
-}
-
-::-webkit-scrollbar-track {
-  background: #555;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-
 
 .light {
   @apply bg-white text-black;

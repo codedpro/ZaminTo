@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FiPieChart } from "react-icons/fi";
+import { House } from "@/types/House";
 
 const toPersianNumber = (number: number) => {
   const persianDigits = "۰۱۲۳۴۵۶۷۸۹";
@@ -19,16 +20,7 @@ const toPersianNumber = (number: number) => {
   return result;
 };
 
-interface House {
-  imageURL: string;
-  price: number;
-  discount?: number;
-  name: string;
-  capacity: number;
-  sold: number;
-  tagNames: { [key: string]: string };
-  tags: { [key: string]: boolean } | undefined;
-}
+
 
 const HouseCard: React.FC<House> = ({
   imageURL,

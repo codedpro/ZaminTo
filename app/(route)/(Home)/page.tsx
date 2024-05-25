@@ -5,6 +5,7 @@ import HousesList from "@/components/HousesList";
 import { houses } from "@/constants/hot";
 import SearchBG from "@/components/SearchBG";
 import ScrollableSection from "@/components/ScrollableSection";
+import Footer from "@/components/Footer";
 
 interface Props {
   searchParams: { [key: string]: string | undefined };
@@ -21,8 +22,7 @@ const Home = async ({ searchParams }: Props) => {
           buttonLink="/start"
         />
       </div>
-
-      <div className="relative bg-white  z-30 p-4 rounded-lg shadow-md  border border-gray-300">
+      <div className="relative bg-white  z-30 p-4 rounded-t-lg shadow-md  border border-gray-300">
         <ScrollableSection
           title="داغ ترین ها"
           houses={houses}
@@ -49,6 +49,10 @@ const Home = async ({ searchParams }: Props) => {
           showArrows={true}
           customClass="latest-section"
         />{" "}
+      </div>{" "}
+      <div className="relative z-30" dir="rtl">
+        {" "}
+        <Footer />
       </div>
     </div>
   );

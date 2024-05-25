@@ -20,6 +20,7 @@ const toPersianNumber = (number: number) => {
 };
 
 interface House {
+  id: string;
   imageURL: string;
   price: number;
   discount?: number;

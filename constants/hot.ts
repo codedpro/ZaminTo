@@ -1,7 +1,6 @@
-
-
 export const houses = [
   {
+    id: "1",
     imageURL: "/houses/wallpaperflare.com_wallpaper.jpg",
     price: 250000000,
     discount: 10,
@@ -13,6 +12,7 @@ export const houses = [
     categories: ["لوکس", "مدرن"],
   },
   {
+    id: "2",
     imageURL: "/houses/wallpaperflare.com_wallpaper-2.jpg",
     price: 180000000,
     name: "کلبه دنج",
@@ -23,6 +23,8 @@ export const houses = [
     categories: ["مدرن"],
   },
   {
+    id: "3",
+
     imageURL: "/houses/wallpaperflare.com_wallpaper-3.jpg",
     price: 320000000,
     name: "عمارت لوکس",
@@ -33,6 +35,7 @@ export const houses = [
     categories: ["لوکس"],
   },
   {
+    id: "4",
     imageURL: "/houses/wallpaperflare.com_wallpaper-4.jpg",
     price: 200000000,
     discount: 15,
@@ -44,6 +47,7 @@ export const houses = [
     categories: ["روستایی"],
   },
   {
+    id: "5",
     imageURL: "/houses/wallpaperflare.com_wallpaper-5.jpg",
     price: 280000000,
     name: "اقامتگاه ساحلی",
@@ -54,6 +58,7 @@ export const houses = [
     categories: ["ساحلی"],
   },
   {
+    id: "6",
     imageURL: "/houses/wallpaperflare.com_wallpaper-6.jpg",
     price: 300000000,
     name: "کلبه کوهستانی",
@@ -63,7 +68,10 @@ export const houses = [
     tags: { tag1: false, tag2: true, tag3: true, tag4: false },
     categories: ["روستایی"],
   },
+
   {
+    id: "7",
+
     imageURL: "/houses/wallpaperflare.com_wallpaper-7.jpg",
     price: 220000000,
     discount: 20,
@@ -75,6 +83,7 @@ export const houses = [
     categories: ["روستایی"],
   },
   {
+    id: "8",
     imageURL: "/houses/wallpaperflare.com_wallpaper-3.jpg",
     price: 350000000,
     name: "لوفت مدرن",
@@ -85,6 +94,7 @@ export const houses = [
     categories: ["مدرن"],
   },
   {
+    id: "9",
     imageURL: "/houses/wallpaperflare.com_wallpaper-5.jpg",
     price: 270000000,
     name: "عمارت تاریخی",
@@ -95,6 +105,8 @@ export const houses = [
     categories: ["خارج شهر"],
   },
   {
+    id: "10",
+
     imageURL: "/houses/wallpaperflare.com_wallpaper-2.jpg",
     price: 230000000,
     discount: 10,

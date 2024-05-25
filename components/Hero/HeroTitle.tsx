@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
-import ReactDOM from "react-dom";
 
 interface HeroTitleProps {
   title: string;
@@ -56,30 +55,12 @@ const HeroTitle: React.FC<HeroTitleProps> = ({ title }) => {
 
     return () => clearInterval(flipInterval);
   }, []);
+
   return (
-    <div dir="rtl" className="flex items-center hero-title">
-      <style jsx>{`
-        .hero-title h1 {
-          z-index: 20;
-        }
-
-        .flip-text {
-          margin-left: 1rem;
-          font-size: 4rem;
-          font-weight: bold;
-          perspective: 1000px;
-          display: inline-flex;
-          align-items: center;
-          color: ${currentColor}; /* Use state to control color */
-        }
-
-        .inline {
-          display: inline;
-        }
-      `}</style>
-
-      <h1 className="text-6xl font-bold text-white m-2">{title}</h1>
-      <div className="flip-text">
+  
+    <div dir="rtl" className="flex flex-col items-center justify-center z-30  sm:flex-row sm:justify-start">
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white m-2">{title}</h1>
+      <div className="flip-text ml-4 text-4xl sm:text-5xl lg:text-6xl font-bold" style={{ color: currentColor }}>
         <div style={{ transformStyle: "preserve-3d" }}>
           {currentText}
           {currentIcon}

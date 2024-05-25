@@ -1,4 +1,3 @@
-// components/Filters.tsx
 "use client";
 
 import { useState } from "react";

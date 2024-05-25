@@ -1,4 +1,3 @@
-// components/LoadMore.tsx
 "use client";
 
 import { useSearchParams, useRouter } from "next/navigation";

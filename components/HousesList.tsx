@@ -4,6 +4,7 @@ import { houses } from "@/constants/hot";
 import LoadMore from "./LoadMore";
 
 interface House {
+  id: string;
   imageURL: string;
   price: number;
   discount?: number;
