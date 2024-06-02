@@ -1,28 +1,9 @@
 import HouseProfile from "@/components/HouseProfile";
 import { houses } from "@/constants/hot";
-
-interface House {
-  id: string;
-  name: string;
-  imageURL: string;
-  price: number;
-  discount: number;
-  capacity: number;
-  sold: number;
-  tagNames: {
-    tag1: string;
-    tag2: string;
-    tag3: string;
-    tag4: string;
-  };
-  tags: {
-    tag1: boolean;
-    tag2: boolean;
-    tag3: boolean;
-    tag4: boolean;
-  };
-  categories: string[];
-}
+import { House } from "@/types/House";
+import "@/styles/globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 interface Props {
   house: House | null;
@@ -34,6 +15,12 @@ async function fetchHouseById(house_id: string): Promise<House | null> {
     return {
       ...house,
       discount: house.discount ?? 0,
+      metrage: (house.metrage ?? 0) as number,
+      bar: (house.bar ?? 0) as number,
+      karbari: (house.karbari ?? "") as string,
+      provience: (house.provience ?? "") as string,
+      city: (house.city ?? "") as string,
+      address: (house.address ?? "") as string,
     };
   }
   return null;
@@ -47,7 +34,11 @@ const HousePage = async ({ params }: { params: { house_id: string } }) => {
   }
 
   return (
-   <HouseProfile house={house}/>
+    <div className="flex flex-col min-h-screen z-30">
+      <Header />
+      <HouseProfile house={house} />
+      <Footer />
+    </div>
   );
 };
 

@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+
 import Filters from "@/components/Filters";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -32,14 +34,19 @@ const Home = async ({ searchParams }: Props) => {
           customClass="hot-section"
         />
         <div
-          className="w-full flex flex-col items-center min-h-screen"
-          style={{ backgroundImage: "url('searchbg.png')" }}
+          className="w-full flex flex-col items-center min-h-screen search-bg"
         >
-          <SearchBG />
+          <Suspense fallback={<div>Loading Search...</div>}>
+            <SearchBG />
+          </Suspense>
           <div className="flex justify-center">
-            <Filters />
+            <Suspense fallback={<div>Loading Filters...</div>}>
+              <Filters />{" "}
+            </Suspense>
           </div>
-          <HousesList query={searchParams} />
+          <Suspense fallback={<div>Loading Houses...</div>}>
+            <HousesList query={searchParams} />
+          </Suspense>
         </div>
         <ScrollableSection
           title="تازه‌ترین‌ها"

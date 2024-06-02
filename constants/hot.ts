@@ -10,6 +10,25 @@ export const houses = [
     tagNames: { tag1: "پروانه", tag2: "مستر", tag3: "پارکینگ", tag4: "شخصی" },
     tags: { tag1: true, tag2: false, tag3: true, tag4: false },
     categories: ["لوکس", "مدرن"],
+    latitude: 48.8584,
+    longitude: 2.3549,
+    galleryImages: [
+      "/houses/wallpaperflare.com_wallpaper-3.jpg",
+      "/houses/wallpaperflare.com_wallpaper-4.jpg",
+    ],
+    OptionsName: {
+      Option1: "پلاک یک",
+      Option2: "سند تک برگ",
+      Option3: "مجوز ساخت",
+      Option4: "باغ",
+    },
+    Options: { Option1: true, Option2: false, Option3: true, Option4: false },
+    metrage: 2000,
+    bar: 20,
+    karbari: "کشاورزی",
+    provience: "مازندران",
+    city: "بابل",
+    address: "جنب بانک کشاورزی",
   },
   {
     id: "2",
@@ -21,6 +40,19 @@ export const houses = [
     tagNames: { tag1: "پروانه", tag2: "مستر", tag3: "پارکینگ", tag4: "شخصی" },
     tags: { tag1: false, tag2: true, tag3: false, tag4: true },
     categories: ["مدرن"],
+    latitude: 48.8584,
+    longitude: 2.3549,
+    galleryImages: [
+      "/houses/wallpaperflare.com_wallpaper-3.jpg",
+      "/houses/wallpaperflare.com_wallpaper-4.jpg",
+    ],
+    OptionsName: {
+      Option1: "پلاک یک",
+      Option2: "سند تک برگ",
+      Option3: "مجوز ساخت",
+      Option4: "باغ",
+    },
+    Options: { Option1: true, Option2: false, Option3: true, Option4: false },
   },
   {
     id: "3",
@@ -33,6 +65,19 @@ export const houses = [
     tagNames: { tag1: "پروانه", tag2: "مستر", tag3: "پارکینگ", tag4: "شخصی" },
     tags: { tag1: true, tag2: true, tag3: true, tag4: true },
     categories: ["لوکس"],
+    latitude: 48.8584,
+    longitude: 2.3549,
+    galleryImages: [
+      "/houses/wallpaperflare.com_wallpaper-3.jpg",
+      "/houses/wallpaperflare.com_wallpaper-4.jpg",
+    ],
+    OptionsName: {
+      Option1: "پلاک یک",
+      Option2: "سند تک برگ",
+      Option3: "مجوز ساخت",
+      Option4: "باغ",
+    },
+    Options: { Option1: true, Option2: false, Option3: true, Option4: false },
   },
   {
     id: "4",
@@ -45,6 +90,19 @@ export const houses = [
     tagNames: { tag1: "پروانه", tag2: "مستر", tag3: "پارکینگ", tag4: "شخصی" },
     tags: { tag1: false, tag2: false, tag3: true, tag4: false },
     categories: ["روستایی"],
+    latitude: 48.8584,
+    longitude: 2.3549,
+    galleryImages: [
+      "/houses/wallpaperflare.com_wallpaper-3.jpg",
+      "/houses/wallpaperflare.com_wallpaper-4.jpg",
+    ],
+    OptionsName: {
+      Option1: "پلاک یک",
+      Option2: "سند تک برگ",
+      Option3: "مجوز ساخت",
+      Option4: "باغ",
+    },
+    Options: { Option1: true, Option2: false, Option3: true, Option4: false },
   },
   {
     id: "5",
@@ -56,6 +114,19 @@ export const houses = [
     tagNames: { tag1: "پروانه", tag2: "مستر", tag3: "پارکینگ", tag4: "شخصی" },
     tags: { tag1: true, tag2: false, tag3: false, tag4: true },
     categories: ["ساحلی"],
+    latitude: 48.8584,
+    longitude: 2.3549,
+    galleryImages: [
+      "/houses/wallpaperflare.com_wallpaper-3.jpg",
+      "/houses/wallpaperflare.com_wallpaper-4.jpg",
+    ],
+    OptionsName: {
+      Option1: "پلاک یک",
+      Option2: "سند تک برگ",
+      Option3: "مجوز ساخت",
+      Option4: "باغ",
+    },
+    Options: { Option1: true, Option2: false, Option3: true, Option4: false },
   },
   {
     id: "6",
@@ -67,6 +138,19 @@ export const houses = [
     tagNames: { tag1: "پروانه", tag2: "مستر", tag3: "پارکینگ", tag4: "شخصی" },
     tags: { tag1: false, tag2: true, tag3: true, tag4: false },
     categories: ["روستایی"],
+    latitude: 48.8584,
+    longitude: 2.3549,
+    galleryImages: [
+      "/houses/wallpaperflare.com_wallpaper-3.jpg",
+      "/houses/wallpaperflare.com_wallpaper-4.jpg",
+    ],
+    OptionsName: {
+      Option1: "پلاک یک",
+      Option2: "سند تک برگ",
+      Option3: "مجوز ساخت",
+      Option4: "باغ",
+    },
+    Options: { Option1: true, Option2: false, Option3: true, Option4: false },
   },
 
   {
@@ -81,6 +165,19 @@ export const houses = [
     tagNames: { tag1: "پروانه", tag2: "مستر", tag3: "پارکینگ", tag4: "شخصی" },
     tags: { tag1: true, tag2: false, tag3: false, tag4: false },
     categories: ["روستایی"],
+    latitude: 48.8584,
+    longitude: 2.3549,
+    galleryImages: [
+      "/houses/wallpaperflare.com_wallpaper-3.jpg",
+      "/houses/wallpaperflare.com_wallpaper-4.jpg",
+    ],
+    OptionsName: {
+      Option1: "پلاک یک",
+      Option2: "سند تک برگ",
+      Option3: "مجوز ساخت",
+      Option4: "باغ",
+    },
+    Options: { Option1: true, Option2: false, Option3: true, Option4: false },
   },
   {
     id: "8",
@@ -92,6 +189,19 @@ export const houses = [
     tagNames: { tag1: "پروانه", tag2: "مستر", tag3: "پارکینگ", tag4: "شخصی" },
     tags: { tag1: false, tag2: true, tag3: false, tag4: true },
     categories: ["مدرن"],
+    latitude: 48.8584,
+    longitude: 2.3549,
+    galleryImages: [
+      "/houses/wallpaperflare.com_wallpaper-3.jpg",
+      "/houses/wallpaperflare.com_wallpaper-4.jpg",
+    ],
+    OptionsName: {
+      Option1: "پلاک یک",
+      Option2: "سند تک برگ",
+      Option3: "مجوز ساخت",
+      Option4: "باغ",
+    },
+    Options: { Option1: true, Option2: false, Option3: true, Option4: false },
   },
   {
     id: "9",
@@ -103,6 +213,19 @@ export const houses = [
     tagNames: { tag1: "پروانه", tag2: "مستر", tag3: "پارکینگ", tag4: "شخصی" },
     tags: { tag1: true, tag2: true, tag3: true, tag4: false },
     categories: ["خارج شهر"],
+    latitude: 48.8584,
+    longitude: 2.3549,
+    galleryImages: [
+      "/houses/wallpaperflare.com_wallpaper-3.jpg",
+      "/houses/wallpaperflare.com_wallpaper-4.jpg",
+    ],
+    OptionsName: {
+      Option1: "پلاک یک",
+      Option2: "سند تک برگ",
+      Option3: "مجوز ساخت",
+      Option4: "باغ",
+    },
+    Options: { Option1: true, Option2: false, Option3: true, Option4: false },
   },
   {
     id: "10",
@@ -116,5 +239,18 @@ export const houses = [
     tagNames: { tag1: "پروانه", tag2: "مستر", tag3: "پارکینگ", tag4: "شخصی" },
     tags: { tag1: false, tag2: false, tag3: false, tag4: true },
     categories: ["آپارتمانی"],
+    latitude: 48.8584,
+    longitude: 2.3549,
+    galleryImages: [
+      "/houses/wallpaperflare.com_wallpaper-3.jpg",
+      "/houses/wallpaperflare.com_wallpaper-4.jpg",
+    ],
+    OptionsName: {
+      Option1: "پلاک یک",
+      Option2: "سند تک برگ",
+      Option3: "مجوز ساخت",
+      Option4: "باغ",
+    },
+    Options: { Option1: true, Option2: false, Option3: true, Option4: false },
   },
 ];

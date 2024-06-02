@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FiPieChart } from "react-icons/fi";
 
 const toPersianNumber = (number: number) => {
@@ -40,13 +41,15 @@ const HouseCard: React.FC<House> = ({
   sold,
   tagNames,
   tags,
+  id,
 }) => {
   const formattedPrice = toPersianNumber(price);
   const formattedSold = toPersianNumber(sold);
   const formattedCapacity = toPersianNumber(capacity);
 
   return (
-    <div
+    <Link
+      href={`/House/${id}`}
       className="bg-white text-gray-800 rounded-lg shadow-md p-4 mb-4 relative"
       dir="rtl"
     >
@@ -94,7 +97,7 @@ const HouseCard: React.FC<House> = ({
           </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

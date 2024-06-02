@@ -19,8 +19,7 @@
     "incremental": true,
     "types": [
       "react",
-      "react-dom",
-      "@types/framer-motion"
+      "react-dom"
     ],
     "plugins": [
       {

@@ -47,3 +47,8 @@
 .dark {
   @apply bg-gray-800 text-white;
 }
+
+.search-bg {
+  background-image: url('/searchbg.png');
+
+}

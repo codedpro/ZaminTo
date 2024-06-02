@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
@@ -17,26 +18,41 @@ const Footer: React.FC = () => {
           </div>
           <div className="text-right">
             <h4 className="text-lg font-semibold mb-2">ما را دنبال کنید</h4>
-            <div className="flex justify-center md:justify-end space-x-4 space-x-reverse">
+            <div className="flex justify-center md:justify-end">
               <Link href="https://www.facebook.com" target="_blank">
-                <img
-                  src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000"
+                <Image
+                  width={32}
+                  height={32}
+                  src="/icons/icons8-facebook.svg"
                   alt="Facebook"
-                  className="w-8 h-8 transform transition-transform duration-300 hover:scale-110"
-                />
-              </Link>
-              <Link href="https://www.twitter.com" target="_blank">
-                <img
-                  src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000"
-                  alt="Twitter"
-                  className="w-8 h-8 transform transition-transform duration-300 hover:scale-110"
+                  className="w-8 h-8 transform transition-transform duration-300 hover:scale-110 mx-1"
                 />
               </Link>
               <Link href="https://www.instagram.com" target="_blank">
-                <img
-                  src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000"
+                <Image
+                  width={32}
+                  height={32}
+                  src="/icons/icons8-instagram.svg"
                   alt="Instagram"
-                  className="w-8 h-8 transform transition-transform duration-300 hover:scale-110"
+                  className="w-8 h-8 transform transition-transform duration-300 hover:scale-110 mx-1"
+                />
+              </Link>
+              <Link href="https://www.twitter.com" target="_blank">
+                <Image
+                  width={32}
+                  height={32}
+                  src="/icons/icons8-twitterx.svg"
+                  alt="Twitter"
+                  className="w-8 h-8 transform transition-transform duration-300 hover:scale-110 mx-1"
+                />
+              </Link>
+              <Link href="https://www.telegram.com" target="_blank">
+                <Image
+                  width={32}
+                  height={32}
+                  src="/icons/icons8-telegram.svg"
+                  alt="Telegram"
+                  className="w-8 h-8 transform transition-transform duration-300 hover:scale-110 mx-1"
                 />
               </Link>
             </div>
