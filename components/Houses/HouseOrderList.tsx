@@ -27,7 +27,7 @@ const HouseOrderList: React.FC<HouseOrderListProps> = ({ selectedHouseId }) => {
           <Tab className="inactive-tab mr-1 px-4 py-2  bg-gray-100 rounded-t-lg border-none focus:outline-none">
             معاملات
           </Tab>
-          <Tab className="inactive-tab mx-1 px-4  bg-gray-100 py-2 border-none focus:outline-none">
+          <Tab className="inactive-tab mx-1 px-4 rounded-t-lg  bg-gray-100 py-2 border-none focus:outline-none">
             تاریخچه
           </Tab>
           <Tab className="inactive-tab ml-1 px-4 py-2  bg-gray-100  rounded-t-lg border-none focus:outline-none">
@@ -37,7 +37,6 @@ const HouseOrderList: React.FC<HouseOrderListProps> = ({ selectedHouseId }) => {
 
         <TabPanel>
           <div className="p-6 bg-white rounded-lg border border-gray-300 shadow-md">
-            <h2 className="text-xl font-bold mb-4">معاملات</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <h3 className="text-lg font-bold text-green-700 mb-2">فروش</h3>
@@ -97,13 +96,13 @@ const HouseOrderList: React.FC<HouseOrderListProps> = ({ selectedHouseId }) => {
 
         <TabPanel>
           <div className="text-center p-6 bg-white rounded-lg border border-gray-300 shadow-md">
-           برای دیدن این صفحه باید وارد اکانت خود شوید
+            برای دیدن این صفحه باید وارد اکانت خود شوید
           </div>
         </TabPanel>
 
         <TabPanel>
           <div className="text-center p-6 bg-white rounded-lg border border-gray-300 shadow-md">
-          برای دیدن این صفحه باید وارد اکانت خود شوید
+            برای دیدن این صفحه باید وارد اکانت خود شوید
           </div>
         </TabPanel>
       </Tabs>
