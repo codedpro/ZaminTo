@@ -26,9 +26,15 @@ const toPersianNumber = (number: number) => {
 
   return result;
 };
-const ProfileInfo = () => {
-  const user = users[0];
+interface ProfileProps {
+  userId: string;
+}
+const ProfileInfo: React.FC<ProfileProps> = ({ userId }) => {
+  const user = users.find((user) => user.id === userId);
 
+  if (user === undefined || user.id === undefined) {
+    return <p>کاربر یافت نشد</p>;
+  }
   return (
     <div className=" mt-10">
       <div className="flex flex-col items-center mb-8">

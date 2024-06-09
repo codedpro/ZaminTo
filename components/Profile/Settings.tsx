@@ -19,6 +19,9 @@ interface SettingsProps {
 
 const Settings: React.FC<SettingsProps> = ({ userId }) => {
   const user = users.find((user) => user.id === userId);
+  if (user === undefined || user.id === undefined) {
+    return <p>کاربر یافت نشد</p>;
+  }
   const [formData, setFormData] = useState({
     firstName: user?.firstName || "",
     lastName: user?.lastName || "",
