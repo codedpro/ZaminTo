@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 // Gallery component
 import React from "react";
@@ -13,8 +13,8 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
 
   return (
-    <div className="w-full "> {/* Set specific width for gallery and map */}
-      <div className="md:h-full"> {/* Ensure gallery takes full height on medium screens */}
+    <div className="w-full ">
+      <div className="md:h-full">
         <Carousel
           selectedItem={currentIndex}
           onChange={(index) => setCurrentIndex(index)}

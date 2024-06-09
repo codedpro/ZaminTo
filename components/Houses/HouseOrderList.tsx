@@ -14,7 +14,7 @@ const HouseOrderList: React.FC<HouseOrderListProps> = ({ selectedHouseId }) => {
   );
 
   if (!houseOrder) {
-    return <div>No data available for this house.</div>;
+    return <div>هیچ معامله ای برای زمین مورد نظر یافت نشد</div>;
   }
 
   const { bids, asks } = houseOrder;

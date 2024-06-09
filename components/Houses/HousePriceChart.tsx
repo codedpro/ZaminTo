@@ -15,7 +15,7 @@ const HousePriceChart: React.FC<Props> = ({ houseId }) => {
   const houseHistory = houseHistories.find((house) => house.id === houseId);
 
   if (!houseHistory) {
-    return <div>No data available for this house.</div>;
+    return <div>تاریخجه قیمت برای زمین مورد نظر یافت نشد</div>;
   }
 
   const data = {

@@ -82,7 +82,7 @@ const HouseInfo: React.FC<Props> = ({ house }) => {
       <div className="flex items-center">
         <FaBuilding className="text-black text-2xl ml-2" />
         <div>
-          <span className="text-lg font-semibold text-black">بر</span>
+          <span className="text-lg font-semibold text-black">بهر</span>
           <p className="text-sm">{house.bar} متر</p>
         </div>
       </div>
