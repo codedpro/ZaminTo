@@ -48,7 +48,7 @@ const CalculationComponent: React.FC<CalculationComponentProps> = ({
   transaction,
   index,
 }) => {
-  const house = houses.find((house) => house.id === transaction.homeID);
+  const house = houses.find((house) => house.id === transaction.landID);
   if (!house) return null;
 
   const getTransactionStatus = (): TransactionStatus => {
@@ -56,7 +56,7 @@ const CalculationComponent: React.FC<CalculationComponentProps> = ({
       .filter(
         (t: any) =>
           t.type === "Sell" &&
-          t.homeID === transaction.homeID &&
+          t.landID === transaction.landID &&
           t.id === transaction.id
       )
       .reduce((acc: number, cur: any) => acc + cur.qty, 0);
@@ -73,7 +73,7 @@ const CalculationComponent: React.FC<CalculationComponentProps> = ({
         .filter(
           (t: any) =>
             t.type === "Sell" &&
-            t.homeID === transaction.homeID &&
+            t.landID === transaction.landID &&
             t.id === transaction.id
         )
         .reduce((acc: number, cur: any) => acc + cur.qty, 0);
@@ -113,7 +113,7 @@ const CalculationComponent: React.FC<CalculationComponentProps> = ({
         .find(
           (t: any) =>
             t.type === "Buy" &&
-            t.homeID === transaction.homeID &&
+            t.landID === transaction.landID &&
             t.id === transaction.id
         ).price;
 

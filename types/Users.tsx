@@ -10,7 +10,7 @@ export interface User {
   isActive: boolean;
   history: Array<any>;
   cash: number;
-  homes: Array<{ homeID: string; qty: number }>;
+  lands: Array<{ landID: string; qty: number }>;
   totalProfit: number;
   withdrawal: number;
   deposite: number;

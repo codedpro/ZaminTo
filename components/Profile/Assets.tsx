@@ -1,9 +1,10 @@
+"use client"
 import React from "react";
-import Link from "next/link";
 import dynamic from "next/dynamic";
 import { users } from "@/constants/UserInfos";
 import { houses } from "@/constants/hot";
 import { User } from "@/types/Users";
+import MyLandCard from "./Assets/MyLandCard";
 
 const TotalAssetsChart = dynamic(() => import("./Assets/TotalAssetsChart"), {
   ssr: false,
@@ -20,45 +21,26 @@ const Assets: React.FC<AssetsProps> = ({ userId }) => {
     return <div>User not found</div>;
   }
 
-  const totalValue =
-    user.cash +
-    user.homes.reduce((acc, home) => {
-      const house = houses.find((house) => house.id === home.homeID);
-      return acc + (house ? home.qty * house.price : 0);
-    }, 0);
-
   return (
-    <div>
-      <TotalAssetsChart cash={user.cash} homes={user.homes} houses={houses} />
-      <div>
-        <h2>Cash: {user.cash}</h2>
-        <h2>Total Profit: {user.totalProfit}</h2>
-        <h2>Withdrawal: {user.withdrawal}</h2>
-        <h2>Deposit: {user.deposite}</h2>
-      </div>
-      <div>
-        {user.homes.map((home) => {
-          const house = houses.find((house) => house.id === home.homeID);
+    <div dir="ltr" className="container mx-auto p-4">
+      <h1 className="text-3xl font-semibold mb-4">دارایی های من</h1>
+
+      <TotalAssetsChart cash={user.cash} lands={user.lands} houses={houses} />
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+        {user.lands.map((land) => {
+          const house = houses.find((house) => house.id === land.landID);
           if (!house) {
             return (
-              <div key={home.homeID}>
-                House not found for homeID: {home.homeID}
+              <div key={land.landID}>
+                House not found for landID: {land.landID}
               </div>
             );
           }
+          const updatedHouse = { ...house, discount: house.discount || 0 };
           return (
-            <div key={home.homeID}>
-              <h3>{house.name}</h3>
-              <p>Quantity: {home.qty}</p>
-              <p>Price: {house.price}</p>
-              <p>Capacity: {house.capacity}</p>
-              <Link href={`/House/${house.id}`} passHref>
-                <img
-                  src={house.imageURL}
-                  alt={house.name}
-                  style={{ cursor: "pointer" }}
-                />
-              </Link>
+            <div key={land.landID}>
+              <MyLandCard house={updatedHouse} quantity={land.qty} />
             </div>
           );
         })}

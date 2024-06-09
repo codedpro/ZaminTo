@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 interface Props {
   searchParams: { [key: string]: string | undefined };
 }
-const Home = async ({ searchParams }: Props) => {
+const land = async ({ searchParams }: Props) => {
   return (
     <div className="light" style={{ height: "100vh", overflow: "auto" }}>
       <Header />
@@ -64,4 +64,4 @@ const Home = async ({ searchParams }: Props) => {
     </div>
   );
 };
-export default Home;
+export default land;
