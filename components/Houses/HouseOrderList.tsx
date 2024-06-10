@@ -39,7 +39,7 @@ const HouseOrderList: React.FC<HouseOrderListProps> = ({ selectedHouseId }) => {
           <div className="p-6 bg-white rounded-lg border border-gray-300 shadow-md">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <h3 className="text-lg font-bold text-green-700 mb-2">فروش</h3>
+                <h3 className="text-lg font-bold text-green-700 mb-2">خرید</h3>
                 <div className="overflow-auto rounded-lg shadow">
                   <table className="min-w-full bg-white">
                     <thead className="bg-green-200">
@@ -65,7 +65,7 @@ const HouseOrderList: React.FC<HouseOrderListProps> = ({ selectedHouseId }) => {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-bold text-red-700 mb-2">خرید</h3>
+                <h3 className="text-lg font-bold text-red-700 mb-2">فروش</h3>
                 <div className="overflow-auto rounded-lg shadow">
                   <table className="min-w-full bg-white">
                     <thead className="bg-red-200">

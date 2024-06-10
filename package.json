@@ -26,6 +26,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-tabs": "^6.0.2",
     "recharts": "^2.12.7",
+    "sharp": "^0.33.4",
     "utils": "link:@/sanity/utils"
   },
   "devDependencies": {

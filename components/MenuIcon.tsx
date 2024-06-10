@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import { MdMenu, MdClose } from "react-icons/md";
 
@@ -71,12 +72,12 @@ export default function MenuIcon({
               />
             </div>
             <ul className="py-6 px-4 space-y-2">
-              <a
-                href="/login"
+              <Link
+                href="/Profile/2"
                 className="text-lg transition duration-300 hover:text-orange-500"
               >
                 ورود
-              </a>
+              </Link>
               {Array.isArray(headerItems) &&
                 headerItems.map((item, index) => (
                   <li

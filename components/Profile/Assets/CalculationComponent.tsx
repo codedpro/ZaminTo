@@ -91,7 +91,7 @@ const CalculationComponent: React.FC<CalculationComponentProps> = ({
       const statusLabel = "باز";
 
       return {
-        status: "bg-gray-100",
+        status: "search-bg ",
         updatedQty,
         priceBought,
         latestLivePrice,

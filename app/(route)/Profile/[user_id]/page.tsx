@@ -48,7 +48,7 @@ const UserProfile = ({ params, searchParams }: UserProfileProps) => {
             </Link>
           ))}
         </div>
-        <div className="w-full md:w-3/4  p-6 bg-white rounded-lg shadow-md mt-4 md:mt-0 md:ml-6">
+        <div className="w-full md:w-3/4  p-6 bg-white rounded-xl shadow-md mt-4 md:mt-0 md:ml-6">
           <div className="p-4">
             {activetab === "settings" && <Settings userId={user_id} />}
             {activetab === "profile-info" && <ProfileInfo userId={user_id} />}

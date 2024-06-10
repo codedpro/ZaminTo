@@ -3,7 +3,7 @@ import Link from "next/link";
 import { House } from "@/types/House";
 import { IoMdCash } from "react-icons/io";
 import Image from "next/image";
-import { AiFillAccountBook, AiFillGolden, AiFillPieChart } from "react-icons/ai";
+import { AiFillGolden, AiFillPieChart } from "react-icons/ai";
 
 interface MyLandCardProps {
   house: House;
@@ -35,7 +35,7 @@ const toPersianNumber = (number: number) => {
 
 const MyLandCard: React.FC<MyLandCardProps> = ({ house, quantity }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden  transition duration-300 transform hover:scale-105">
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 transform hover:scale-105">
       <Link href={`/House/${house.id}`} passHref className="cursor-pointer">
         <img
           src={house.imageURL}
@@ -45,10 +45,10 @@ const MyLandCard: React.FC<MyLandCardProps> = ({ house, quantity }) => {
       </Link>
 
       <div className="p-4">
-        <h3 className="text-lg font-semibold mb-2">{house.name}</h3>
-        <div className="flex items-center mb-2">
+        <h3 className="text-lg sm:text-xl font-semibold mb-2">{house.name}</h3>
+        <div className="flex items-center flex-wrap mb-2">
           <IoMdCash className="text-gray-600 text-lg" />
-          <h4 className="text-gray-600  mr-1">قیمت:</h4>
+          <h4 className="text-gray-600 mr-1 sm:text-sm md:text-base">قیمت:</h4>
           <div className="flex-1"></div>
           <div className="flex items-center">
             <p className="text-gray-700 mr-1">
@@ -57,9 +57,9 @@ const MyLandCard: React.FC<MyLandCardProps> = ({ house, quantity }) => {
             <Image src="/icons/Toman.svg" alt="تومان" width={16} height={16} />
           </div>
         </div>
-        <div className="flex items-center mb-2">
+        <div className="flex items-center flex-wrap mb-2">
           <AiFillPieChart className="text-gray-600 text-lg" />
-          <h4 className="text-gray-600 mr-1">سهم من:</h4>
+          <h4 className="text-gray-600 mr-1 sm:text-sm md:text-base">سهم من:</h4>
           <div className="flex-1"></div>
           <div className="flex items-center">
             <p className="text-gray-700 mr-1">
@@ -67,9 +67,9 @@ const MyLandCard: React.FC<MyLandCardProps> = ({ house, quantity }) => {
             </p>
           </div>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center flex-wrap">
           <AiFillGolden className="text-gray-600 text-lg" />
-          <h4 className="text-gray-600 mr-1">ارزش کل سهام من:</h4>
+          <h4 className="text-gray-600 mr-1 text-sm md:text-base">ارزش کل سهام من:</h4>
           <div className="flex-1"></div>
           <div className="flex items-center">
             <p className="text-gray-700 mr-1">

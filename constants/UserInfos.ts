@@ -79,9 +79,11 @@ export const users = [
     lands: [
       { landID: "8", qty: 1 },
       { landID: "7", qty: 5 },
+      { landID: "2", qty: 2 },
+      { landID: "1", qty: 3 },
     ],
-    totalProfit: 40000000,
+    totalProfit: 1050000000,
     withdrawal: 20000000,
-    deposite: 170000000,
+    deposite: 1700000000,
   },
 ];

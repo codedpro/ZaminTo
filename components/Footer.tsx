@@ -63,17 +63,17 @@ const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} تمامی حقوق محفوظ است.
           </p>
           <nav className="flex space-x-4 space-x-reverse mt-4 md:mt-0">
-            <Link href="/privacy-policy">
+            <Link href="/">
               <span className="text-gray-600 hover:text-blue-500 transition-colors duration-300">
                 سیاست حفظ حریم خصوصی
               </span>
             </Link>
-            <Link href="/terms-of-service">
+            <Link href="/">
               <span className="text-gray-600 hover:text-blue-500 transition-colors duration-300">
                 شرایط خدمات
               </span>
             </Link>
-            <Link href="/contact">
+            <Link href="/">
               <span className="text-gray-600 hover:text-blue-500 transition-colors duration-300">
                 تماس با ما
               </span>

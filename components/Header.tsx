@@ -44,7 +44,7 @@ export default function Header() {
 
         <div className="lg:flex lg:justify-end">
           <Link
-            href="/login"
+            href="/Profile/2"
             className={`px-4 py-2 border rounded-full transition duration-300 focus:outline-none focus:ring ${
               isScrolled
                 ? "text-black border-black hover:bg-orange-500 hover:text-white hover:shadow-lg focus:ring-orange-500"

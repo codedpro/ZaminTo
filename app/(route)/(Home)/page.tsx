@@ -21,7 +21,7 @@ const land = async ({ searchParams }: Props) => {
           title="زمینه تو"
           subtitle="اخرین جایی که میگردی"
           buttonText="بزن بریم"
-          buttonLink="/start"
+          buttonLink="/Profile/2"
         />
       </div>
       <div className="relative bg-white  z-30 p-4 rounded-t-lg shadow-md  border border-gray-300">
