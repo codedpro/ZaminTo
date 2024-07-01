@@ -4,13 +4,12 @@ import { useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 
 const links = [
-  "مدرن",
-  "استخر دار",
-  "آپارتمانی",
-  "ساحلی",
-  "لوکس",
-  "خارج شهر",
-  "روستایی",
+  "شخصی",
+  "دریا",
+  "جنگل",
+  "سند تک برگ",
+  "سند شورایی",
+  "تجاری",
 ];
 const Filters = () => {
   const [active, setActive] = useState("");
