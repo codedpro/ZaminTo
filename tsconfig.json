@@ -7,7 +7,6 @@
       "esnext"
     ],
     "allowJs": true,
-    // Removed skipLibCheck
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
