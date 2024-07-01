@@ -7,7 +7,6 @@ interface House {
   id: string;
   imageURL: string;
   price: number;
-  discount?: number;
   name: string;
   capacity: number;
   sold: number;

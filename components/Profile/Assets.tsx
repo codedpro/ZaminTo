@@ -57,7 +57,7 @@ const Assets: React.FC<AssetsProps> = ({ userId }) => {
               </div>
             );
           }
-          const updatedHouse = { ...house, discount: house.discount || 0 };
+          const updatedHouse = { ...house};
           return (
             <div key={land.landID}>
               <MyLandCard house={updatedHouse} quantity={land.qty} />

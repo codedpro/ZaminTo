@@ -15,8 +15,10 @@ export const houses = [
     OptionsName: {
       Option1: "پلاک یک",
       Option2: "سند شخصی",
+      Option3: "پلاک یک",
+      Option4: "سند شخصی",
     },
-    Options: { Option1: true, Option2: false },
+    Options: { Option1: true, Option2: false,  Option3: false,  Option4: false },
     metrage: 378,
     bar: 13,
     karbari: "مسکونی",

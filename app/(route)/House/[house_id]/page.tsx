@@ -14,7 +14,6 @@ async function fetchHouseById(house_id: string): Promise<House | null> {
   if (house) {
     return {
       ...house,
-      discount: house.discount ?? 0,
       metrage: (house.metrage ?? 0) as number,
       bar: (house.bar ?? 0) as number,
       karbari: (house.karbari ?? "") as string,

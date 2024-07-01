@@ -24,7 +24,6 @@ interface House {
   id: string;
   imageURL: string;
   price: number;
-  discount?: number;
   name: string;
   capacity: number;
   sold: number;
@@ -35,7 +34,7 @@ interface House {
 const HouseCard: React.FC<House> = ({
   imageURL,
   price,
-  discount,
+
   name,
   capacity,
   sold,
@@ -62,14 +61,6 @@ const HouseCard: React.FC<House> = ({
           className="w-full h-full object-cover rounded-lg"
         />
         <div className="absolute top-1 right-1 flex flex-col gap-1">
-          {discount && (
-            <div
-              dir="rtl"
-              className="bg-orange-500 text-center text-sm text-white rounded-full px-3 py-1"
-            >
-              {discount}% تخفیف
-            </div>
-          )}
           {tags &&
             Object.entries(tags).map(([tag, value]) => {
               if (!value) return null;
